@@ -4,7 +4,9 @@ metadata:
   name: coreset-algorithms
 spec:
   ports:
-  - port: 80
+    # port: The service (kubernetes) exposed port
+  - port: 8080
+    # targetPort: the exposed port in container/pod
     targetPort: 8080
   selector:
     app: coreset-algorithms
