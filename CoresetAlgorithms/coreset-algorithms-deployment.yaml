@@ -17,4 +17,4 @@ spec:
       - image: hub.docker.com/repository/docker/varj/coresets-webapi:latest
         name: coreset-algorithms
         ports:
-        - containerPort: 80
+        - containerPort: 8080
