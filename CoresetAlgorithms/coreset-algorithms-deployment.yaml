@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coreset-algorithms
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: coreset-algorithms
+  template:
+    metadata:
+      labels:
+        app: coreset-algorithms
+    spec:
+      containers:
+      - image: hub.docker.com/repository/docker/varj/coresets-webapi:latest
+        name: coreset-algorithms
+        ports:
+        - containerPort: 80
